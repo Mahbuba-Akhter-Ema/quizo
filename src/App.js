@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog/Blog';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Main from './components/Main/Main';
 import QuizDetails from './components/QuizDetails/QuizDetails';

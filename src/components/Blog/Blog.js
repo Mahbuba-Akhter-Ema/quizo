@@ -25,12 +25,12 @@ const Blog = () => {
                 className="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
               >
                 <p className="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
-                what is the purpose of react router?
+                What is the purpose of react router?
                 </p>
               </a>
             </div>
             <p className="text-gray-700">
-            React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.
+               React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.
             </p>
           </div>
         </div>
@@ -55,13 +55,12 @@ const Blog = () => {
                 className="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
               >
                 <p className="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
-                  A flower in my green garden
+                How does context api work?
                 </p>
               </a>
             </div>
             <p className="text-gray-700">
-              Chase ball of string eat plants, meow, and throw up because I ate
-              plants going to catch the red dot today going.
+                The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to "prop drilling" or moving props from grandparent to child to parent, and so on. Context is also touted as an easier, lighter approach to state management using Redux.
             </p>
           </div>
         </div>
@@ -86,13 +85,12 @@ const Blog = () => {
                 className="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
               >
                 <p className="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
-                  We never had the love we deserve
+                What is useref hook in react?
                 </p>
               </a>
             </div>
             <p className="text-gray-700">
-              Sportacus andrew weatherall goose Refined gentlemen super mario
-              des lynam alpha trion zap.
+               The useRef Hook allows you to persist values between renders. It can be used to store a mutable value that does not cause a re-render when updated. It can be used to access a DOM element directly.
             </p>
           </div>
         </div>
