@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Quiz = ({quiz}) => {
     const {name, logo, total} = quiz;
