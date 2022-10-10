@@ -6,7 +6,7 @@ const Home = () => {
    const allQuiz = useLoaderData();
    console.log(allQuiz);
     return (
-        <div>
+        <div className='flex mb-10'>
             {
                 allQuiz.data.map(quiz => <Quiz
                  key={quiz.id}
