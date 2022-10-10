@@ -44,9 +44,9 @@ const Nav = () => {
             </li>
             <li>
               <a
-                href="/"
-                aria-label="About us"
-                title="About us"
+                href="/statistics"
+                aria-label="statistics"
+                title="statistics"
                 class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
                 Statistics
@@ -146,9 +146,9 @@ const Nav = () => {
                       </li>
                       <li>
                         <a
-                          href="/"
-                          aria-label="About us"
-                          title="About us"
+                          href="/statistics"
+                          aria-label="statistics"
+                          title="statistics"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Statistics
