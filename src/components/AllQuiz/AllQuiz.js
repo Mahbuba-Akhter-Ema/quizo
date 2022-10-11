@@ -1,52 +1,48 @@
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
+import Option from '../Option/Option';
+import { EyeIcon } from '@heroicons/react/24/solid'
+import './AllQuiz.css'
+
 
 const AllQuiz = ({quiz}) => {
-    const {id, question, options, correctAnswer} = quiz;
+    const { question, options, correctAnswer} = quiz;
+    const questions = question.slice(3, -4)
+    const handleClick = (answer) =>{
+        if(answer === correctAnswer){
+            alert('Correct Answer')
+        }
+        else{
+            alert('Wrong Answer')
+        }
+    };
+    const [showDiv,setShowDiv] = useState(false);
+    const handleEyeClick = () =>{
+        setShowDiv(true);  
+    };
 
     return (
-      <div className='bg-pink-300 w-10/12 bg-gray-200 m-auto'>
-        <div className='m-auto bg-gray-300 rounded-xl'>
-           <h1 className='m-4 text-2xl text-orange-800 font-bold'>
-                Quiz:{question}
-           </h1>
-           <div className='gird grid-cols-2'>
-                <div className='border-2 border-violet-400 bg-green-200 rounded-lg flex w-11/12 m-auto text-center mt-2 mb-2'>
-                    <input 
-                    className='ml-4 mr-4'
-                    type="radio"
-                    id={options[0]}
-                    name={id}
-                    value={options[0]}
-                    />
-                    <label className="bg-yellow-200   py-6 w-full hover:bg-yellow-300 rounded" for={options[0]}>{options[0]}</label>
-                    <input 
-                    className='ml-4 mr-4'
-                    type="radio"
-                    id={options[1]}
-                    name={id}
-                    value={options[1]}
-                    />
-                    <label className="bg-yellow-200   py-6 w-full hover:bg-yellow-300 rounded" for={options[1]}>{options[1]}</label>
-                    <input 
-                    className='ml-4 mr-4'
-                    type="radio"
-                    id={options[2]}
-                    name={id}
-                    value={options[2]}
-                    />
-                    <label className="bg-yellow-200   py-6 w-full hover:bg-yellow-300 rounded" for={options[2]}>{options[2]}</label>
-                    <input 
-                    className='ml-4 mr-4'
-                    type="radio"
-                    id={options[3]}
-                    name={id}
-                    value={options[3]}
-                    />
-                    <label className="bg-yellow-200   py-6 w-full hover:bg-yellow-300 rounded" for={options[3]}>{options[3]}</label>
-                </div>
-           </div>
+      <div className='bg-pink-200 w-10/12 bg-gray-300 m-auto mt-4 rounded-xl p-2'>
+        <div className='m-auto bg-gray-400 rounded-xl p-2'>
+            <div className='flex justify-between w-2/3 m-auto '>
+                <h1>{questions}</h1>
+                <EyeIcon onClick={handleEyeClick} className="h-6 w-6 text-blue-500"/>
+            </div>
+            {
+                showDiv && (
+                    <div id="myModal" className="modal">
+                    <div className="modal-content">
+                        <span onClick={()=> setShowDiv(false)} className="close">&times;</span>
+                        <p>{correctAnswer}</p>
+                    </div>
+                    </div>
+                )
+            }
+            {
+                options.map((option, _idx) => <Option key={_idx} option={option} handleClick={handleClick}></Option>)
+            }
         </div>
       </div>
+      
     );
 };
 

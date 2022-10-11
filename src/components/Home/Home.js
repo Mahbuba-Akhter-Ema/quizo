@@ -9,7 +9,7 @@ const Home = () => {
     return (        
         <div >
             <Header></Header>
-            <div className='flex mb-10  justify-between'>
+            <div className='flex flex-wrap w-100 m-10 justify-between' >
             {
                 allQuiz.data.map(quiz => <Quiz
                  key={quiz.id}
