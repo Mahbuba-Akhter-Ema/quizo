@@ -1,12 +1,15 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Header from '../Header/Header';
 import Quiz from '../Quiz/Quiz';
 
 const Home = () => {
    const allQuiz = useLoaderData();
-   console.log(allQuiz);
-    return (
-        <div className='flex mb-10'>
+
+    return (        
+        <div >
+            <Header></Header>
+            <div className='flex mb-10  justify-between'>
             {
                 allQuiz.data.map(quiz => <Quiz
                  key={quiz.id}
@@ -14,8 +17,9 @@ const Home = () => {
                 >
                 </Quiz>)
             }
-        </div>
-    );
+            </div>
+        </div>     
+    );    
 };
 
 export default Home;
